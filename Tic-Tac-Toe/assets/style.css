@@ -1,0 +1,239 @@
+::-webkit-scrollbar {
+    background: white;
+    display: block
+}
+::-webkit-scrollbar-thumb {
+    background: green
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 0;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+#menu_board {
+    background: url('../media/images/ttt_bg.jpg');
+    background-size: contain;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: block;
+    z-index: 50;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: scale(1);
+    transition: 2s;
+    animation: start_game 1s;
+}
+
+@keyframes start_game {
+    0% {
+        transform: scale(0)
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#menu, #form {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#form {
+    display: none
+}
+
+button {
+    padding: 4%;
+    background: linear-gradient(white, grey);
+    text-shadow: 2px 2px 2px white;
+    font-weight: bold;
+    border: 2px solid blue;
+    box-shadow: 2px 2px 3px white;
+    width: 200px;
+    cursor: alias;
+    transition: .5s;
+}
+
+button:hover, button:focus {
+    background: blue;
+    color: white;
+    text-shadow: none;
+    font-weight: bolder;
+}
+
+input[type=text] {
+    width: 280px;
+    border: 0;
+    padding: 2.5%;
+    box-shadow: 5px 5px 10px lightgrey;
+    transition: .5s;
+    font-size: large; font-family: cursive;
+}
+
+input[type=text].focus {
+    border-radius: 20px;
+    width: 450px;
+    border: 0;
+    border-bottom: 2px solid blue;
+    outline: none;
+}
+
+.input-warning {
+    background: white;
+    display: none;
+    font-size: x-large; font-weight:bolder; color:crimson; text-shadow: 2px 2px 1px white, 2px 2px 2px black;
+}
+
+.action_btns {
+    background: linear-gradient(blue, darkblue);
+    padding: 4.5%;
+    color: white;
+    font-weight: 800;
+    border: 0;
+    letter-spacing: 5px;
+    font-family: tahoma;
+    text-shadow: none;
+    font-size: large;
+    text-align: center;
+    cursor: progress;
+}
+
+.action_btns:hover {
+    background: linear-gradient(darkgrey, black);
+    color: white;
+}
+
+#canvas {
+    background: url('../media/images/c_bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: firebrick;
+    padding-bottom: 40px;
+    width: 100%;
+    display: none;
+    user-select: none;
+    margin: 0 auto;
+}
+
+.top-row {
+    display: inline-flex;
+    width: 100%;
+    color: white;
+    font-weight: bolder;
+    background: black;
+    margin: 0 auto
+}
+
+#player1, #score1, #player2, #score2 {
+    display: block;
+    padding: 1.5%;
+    font-size: x-large;
+    overflow: hidden;
+    word-wrap: break-word
+}
+
+#player1, #player2 {
+    width: 50%;
+    background: red;
+}
+
+#score1, #score2 {
+    width: 30%;
+    background: darkred;
+}
+
+.row {
+    background: none;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+font-weight: bolder;
+}
+
+.b, .b2, .b3 {
+background: black;
+color: yellow;
+width: 50px;
+height: 50px;
+display: grid;
+justify-content: center;
+align-items: center;
+padding: 4%;
+cursor: pointer;
+font-weight: bolder;
+font-size: 50px;
+}
+
+@keyframes blink {
+    100% {
+        color: white;
+        background: green;
+    }
+}
+
+#turns {
+    width: 100%;
+    padding: 3%;
+    text-align: center;
+    font-family: monospace;
+    font-size: x-large;
+    animation: fade 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .b {
+        width: 100%;
+        height: 100%;
+        font-size: x-large
+    }
+}
+
+#scores-board {
+    width: 0px; 
+    height: 100%; 
+    background: white; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    transition: 1s; 
+    position: fixed; 
+    border: 3px solid blue; 
+    font-family: cursive; 
+    z-index: 1000; 
+    overflow-x: hidden;
+    display: block
+}
+#scores-board, #scores {
+    font-size: x-large;
+    font-weight: bolder;
+}
+#playA {
+    font-size: x-large; width:100%; background: red; cursor: move;
+}

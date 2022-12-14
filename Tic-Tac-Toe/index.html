@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+</title>
+<link rel="stylesheet" href="assets/style.css" />
+<script src="assets/script.js"></script>
+</head>
+
+<body oncontextmenu="return false" onload="game()">
+
+    <!-- <audio src="intromp3" controls></audio>
+    <audio src="win count.mp3" controls></audio>
+    <audio src="losse count.mp3" controls></audio>
+    <audio src="win final.mp3" controls></audio>
+    <audio src="loose final.mp3" controls></audio> -->
+
+    <section id="game" oncontextmenu="return false">
+
+<section id="menu_board">
+    <section id="menu">
+    <button id="m_select" onclick="mp()"> Multiplayer </button>
+    </section>
+
+    <section id="form">
+    <input type="text" id="f_player" maxlength="15" placeholder="Your Name (X)" /> <span class="input-warning"> * Please fill in this box. * </span>
+    <input type="text" id="s_player" maxlength="15" placeholder="Your Name (O)" /> <span class="input-warning"> * Please fill in this box. * </span>
+    
+    <button class="action_btns" style="background:green; color:yellow" id="submit">Submit</button>
+
+    <button class="action_btns" onclick="bck()">Back</button>
+    </section>
+</section>
+
+<section id="scores-board">
+    <article id="scores" align="center"></article>
+    <br>
+    <button onclick="document.location.reload(true)" id="playA">Play Again</button>
+</section>
+
+<section id="canvas">
+
+    <div class="top-row">
+        <span id="player1">Player 1 </span> <hr> <span id="score1"> Score: </span>
+        <span id="player2">Player 2 </span> <hr> <span id="score2"> Score: </span>
+    </div>
+
+    <div class="row" style="background: rgba(0, 0, 0, 0.5);"><em id="turns">&nbsp;</em></div>
+    <span style="background: black" id="chances" class="row">1 / 50</span> <br>
+
+<div class="row">
+<div onclick="" class="b b2 b3" style="border-right: 3px groove red; border-bottom: 3px groove blue;">&nbsp;</div>
+<div onclick="" class="b b2 b3" style="border-right: 3px groove green; border-bottom: 3px groove yellow;">&nbsp;</div>
+<div onclick="" class="b b2 b3" style="border-bottom: 3px groove maroon;">&nbsp;</div>
+</div>
+
+<div class="row">
+<div onclick="" class="b b2 b3" style="border-right: 3px groove magenta; border-bottom: 3px groove firebrick;">&nbsp;</div>
+<div onclick="" class="b b2 b3" style="border-right: 3px groove orange; border-bottom: 3px groove grey;">&nbsp;</div>
+<div onclick="" class="b b2 b3" style="border-bottom: 3px groove brown;">&nbsp;</div>
+</div>
+
+<div class="row">
+    <div onclick="" class="b b2 b3" style="border-right: 3px groove yellowgreen;">&nbsp;</div>
+    <div onclick="" class="b b2 b3" style="border-right: 3px groove lightgrey;">&nbsp;</div>
+    <div onclick="" class="b b2 b3">&nbsp;</div>
+</div>
+
+</section>
+
+</section>
+</body>
+</html>
